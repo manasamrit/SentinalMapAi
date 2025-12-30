@@ -1,0 +1,107 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Product+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Base Theme - Light Mode */
+.stApp {
+    background-color: #ffffff;
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+    color: #202124;
+}
+
+/* Headers */
+h1,
+h2,
+h3 {
+    color: #202124;
+    font-family: 'Product Sans', 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+/* Buttons (Google Blue) */
+div.stButton>button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    font-family: 'Google Sans', sans-serif;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+div.stButton>button:hover {
+    background-color: #1765cc;
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+    color: white;
+    /* Ensure text stays white */
+}
+
+div.stButton>button:active {
+    background-color: #155db5;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #f8f9fa;
+    /* Material Design Light Gray */
+    border-right: 1px solid #dadce0;
+}
+
+/* Cards (Material Design Style) */
+.risk-card {
+    background: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    /* Material Elevation 1 */
+    transition: box-shadow 0.3s ease;
+}
+
+.risk-card:hover {
+    box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.3), 0 4px 8px 3px rgba(60, 64, 67, 0.15);
+}
+
+.metric-box {
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f1f3f4;
+    color: #202124;
+}
+
+/* Status Expander Styling */
+div[data-testid="stStatusWidget"] {
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 8px;
+}
+
+/* Agent Logs */
+.agent-log {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85em;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    height: 150px;
+    overflow-y: auto;
+    border: 1px solid #dadce0;
+}
+
+/* Links */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
