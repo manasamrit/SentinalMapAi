@@ -24,9 +24,10 @@ with open('src/ui/styles.css') as f:
 
 # ---------------- NAVIGATION & SIDEBAR ---------------- #
 try:
-    st.sidebar.image("google-logo.png", width=120) 
+    # Reduced width for better sidebar branding
+    st.sidebar.image("google-logo.png", width=80) 
 except:
-    st.sidebar.image("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", width=120)
+    st.sidebar.image("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", width=80)
 
 st.sidebar.title("SentinelMap AI")
 st.sidebar.markdown("**Enterprise Edition**")
@@ -51,9 +52,9 @@ st.sidebar.caption("v2.0.0 Enterprise | Google Trust & Safety")
 
 # ---------------- MAIN HEADER ---------------- #
 st.markdown("""
-    <div style='display: flex; align-items: center; gap: 10px; padding-bottom: 20px;'>
-        <img src='https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg' style='height: 40px;'>
-        <h1 style='margin: 0; font-size: 2.2rem; color: #3c4043;'>Trust & Safety Maps Investigation Console</h1>
+    <div style='display: flex; align-items: center; gap: 15px; padding-bottom: 20px;'>
+        <img src='https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg' style='height: 32px;'>
+        <h1 style='margin: 0; font-size: 2.0rem; color: #3c4043; font-family: "Google Sans", "Helvetica", sans-serif;'>Trust & Safety Maps Investigation Console</h1>
     </div>
 """, unsafe_allow_html=True)
 
