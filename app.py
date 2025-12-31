@@ -23,13 +23,18 @@ with open('src/ui/styles.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # ---------------- NAVIGATION & SIDEBAR ---------------- #
-try:
-    # Reduced width for better sidebar branding
-    st.sidebar.image("google-logo.png", width=80) 
-except:
-    st.sidebar.image("https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png", width=80)
+# ---------------- NAVIGATION & SIDEBAR ---------------- #
+# Centered HQ Google G Logo
+st.sidebar.markdown(
+    """
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/768px-Google_%22G%22_logo.svg.png" width="60">
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
-st.sidebar.title("SentinelMap AI")
+st.sidebar.markdown("<h1 style='text-align: center;'>SentinelMap AI</h1>", unsafe_allow_html=True)
 st.sidebar.markdown("---")
 st.sidebar.subheader("🔐 API Credentials")
 st.sidebar.caption("Loaded from System Environment if empty.")
@@ -50,24 +55,8 @@ st.sidebar.markdown("---")
 st.sidebar.caption("v2.0.0 | Google Trust & Safety")
 
 # ---------------- MAIN HEADER ---------------- #
-import base64
-def get_base64_logo():
-    try:
-        with open("google-logo.png", "rb") as f:
-            data = f.read()
-        return base64.b64encode(data).decode()
-    except:
-        return None
-
-logo_b64 = get_base64_logo()
-if logo_b64:
-    logo_html = f'<img src="data:image/png;base64,{logo_b64}" style="height: 50px; margin-bottom: 10px;">'
-else:
-    logo_html = '<img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" style="height: 50px; margin-bottom: 10px;">'
-
-st.markdown(f"""
+st.markdown("""
     <div style='text-align: center; padding-bottom: 20px;'>
-        {logo_html}
         <h1 style='margin: 0; font-size: 2.2rem; color: #3c4043; font-family: "Google Sans", "Helvetica", sans-serif;'>Trust & Safety Maps Investigation Console</h1>
     </div>
 """, unsafe_allow_html=True)
